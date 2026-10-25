@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio</title>
+  <meta name="description" content="Website portofolio pribadi">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="glow" id="glow"></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" id="logo">●</a>
+    <nav class="links" id="links">
+      <a href="#about">Tentang</a>
+      <a href="#projects">Karya</a>
+      <a href="#certificates">Sertifikat</a>
+      <a href="#organizations">Organisasi</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Ganti tema">🌙</button>
+      <button class="icon-btn burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="blob b1"></div><div class="blob b2"></div>
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">👋 Halo, saya</p>
+          <h1 id="heroName">Nama</h1>
+          <h2 class="typing"><span id="typed"></span><span class="caret">|</span></h2>
+          <p class="lead" id="heroTagline"></p>
+          <div class="cta">
+            <a href="#projects" class="btn primary">Lihat Karya</a>
+            <a href="https://wa.me/6285183100849"class="btn ghost">Hubungi Saya</a>
+            <a id="cvBtn" class="btn ghost" target="_blank" rel="noopener" hidden>Unduh CV ⬇</a>
+          </div>
+          <div class="stats" id="stats"></div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-ring"><img id="heroPhoto" alt="Foto profil"></div>
+          <div class="chip c1">💻 Developer</div>
+          <div class="chip c2">🎮 Machine Learning</div>
+          <div class="chip c3">🏆 Organizer</div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Gulir ke bawah">⌄</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal"><span>01</span><h2>Tentang Saya</h2></div>
+        <div class="about-grid">
+          <div class="about-text reveal" id="aboutText"></div>
+          <div class="skills reveal" id="skills"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head reveal"><span>02</span><h2>Website &amp; Game Buatan Saya</h2></div>
+        <div class="filters reveal" id="projectFilters"></div>
+        <div class="grid projects" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <div class="section-head reveal"><span>03</span><h2>Sertifikat</h2></div>
+        <div class="toolbar reveal">
+          <div class="filters" id="certFilters"></div>
+          <input type="search" id="certSearch" placeholder="🔎 Cari sertifikat…" aria-label="Cari sertifikat">
+        </div>
+        <div class="grid certs" id="certGrid"></div>
+        <p class="empty" id="certEmpty" hidden>Tidak ada sertifikat yang cocok.</p>
+      </div>
+    </section>
+
+    <!-- ORGANIZATIONS -->
+    <section id="organizations" class="section alt">
+      <div class="container">
+        <div class="section-head reveal"><span>04</span><h2>Pengalaman Organisasi</h2></div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal"><span>05</span><h2>Mari Terhubung</h2></div>
+        <div class="contact-card reveal">
+          <h3>Punya ide, proyek, atau peluang kolaborasi?</h3>
+          <p>Kirim pesan, saya senang berdiskusi.</p>
+          <a class="btn primary big" id="mailBtn">✉ Kirim Email</a>
+          <div class="socials" id="socials"></div>
+          <p class="loc" id="location"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p id="footerText"></p></footer>
+
+  <!-- LIGHTBOX / MODAL -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Tutup">✕</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Sebelumnya">‹</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav next" id="lbNext" aria-label="Berikutnya">›</button>
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Ke atas">↑</button>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
